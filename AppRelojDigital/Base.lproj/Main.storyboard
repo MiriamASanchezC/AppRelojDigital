@@ -21,6 +21,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vPi-w7-pyO">
+                                <rect key="frame" x="-27" y="-11" width="420" height="870"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ni-et-jsB">
                                 <rect key="frame" x="16" y="79" width="361" height="719"/>
                                 <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="60"/>
@@ -46,6 +50,9 @@
                                                     <segment title="Yellow"/>
                                                     <segment title="Red"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="clockColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="kfL-4S-aft"/>
+                                                </connections>
                                             </segmentedControl>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Background Color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEf-jz-z7b">
                                                 <rect key="frame" x="0.0" y="82" width="345" height="31"/>
@@ -60,6 +67,9 @@
                                                     <segment title="Green"/>
                                                     <segment title="Pink"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="backgroundSegCtrl:" destination="BYZ-38-t0r" eventType="valueChanged" id="0w2-hv-cJX"/>
+                                                </connections>
                                             </segmentedControl>
                                         </subviews>
                                     </stackView>
@@ -83,7 +93,17 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Show settings">
                                     <fontDescription key="titleFontDescription" name="Farah" family="Farah" pointSize="24"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="settings:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q6l-nj-rmd"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Miriam Alicia Sanchez Cervantes NC:21130882" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxF-T2-4mU">
+                                <rect key="frame" x="8" y="206" width="393" height="103"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -101,7 +121,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backgroundImage" destination="vPi-w7-pyO" id="wbA-T4-Tqk"/>
+                        <outlet property="backgroundSeg" destination="IZe-Se-Zhh" id="JRk-IO-Pkh"/>
+                        <outlet property="clockColorSeg" destination="deH-3f-7yu" id="Yxd-fz-cLl"/>
                         <outlet property="label" destination="4Ni-et-jsB" id="qje-pA-8by"/>
+                        <outlet property="settingsButton" destination="eJ1-fu-v3N" id="2md-Gq-fdS"/>
+                        <outlet property="settingsView" destination="PpF-AV-LRu" id="h7K-7L-l6q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
